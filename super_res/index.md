@@ -8,7 +8,48 @@ code_url: "#"
 dataset_url: "#"
 ---
 
-<section class="section hero is-light">
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <div class="columns is-centered has-text-centered">
+            <div class="column">
+              <div class="title">Input</div>
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="{{ '/assets/videos/1_lq.mp4' | relative_url }}" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <div class="title">Output</div>
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="{{ '/assets/videos/1_hq.mp4' | relative_url }}" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="columns is-centered has-text-centered">
+            <div class="column">
+              <div class="title">Input</div>
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="{{ '/assets/videos/2_lq.mp4' | relative_url }}" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <div class="title">Output</div>
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="{{ '/assets/videos/2_hq.mp4' | relative_url }}" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
