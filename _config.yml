@@ -1,0 +1,56 @@
+# Site settings
+title: Research Projects
+email: your-email@example.com
+description: >- # This is the default description that will be used by search engines and when sharing the page.
+  A collection of anonymous project pages for paper submissions.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+
+# Minification
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  - scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "project"
+      show_author: false
+      show_date: false
+      share: false
+      comments: false
+      read_time: false
+
+# SASS configuration
+sass:
+  style: compressed
+
+# Permalinks
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
