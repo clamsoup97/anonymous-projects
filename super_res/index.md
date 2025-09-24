@@ -42,18 +42,29 @@ title: "Super-Resolution: A New Approach"
     <div class="container">
         <div class="item">
           <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.7475">
-            <div class="video">
-              <video muted autoplay="autoplay" loop="loop" width="100%">
-                <source src="{{ '/assets/videos/masked.mp4' | relative_url }}" type="video/mp4">
-              </video> 
-            </div>
-            <div class="video">
-              <video muted autoplay="autoplay" loop="loop" width="100%">
-                <source src="{{ '/assets/videos/ours.mp4' | relative_url }}" type="video/mp4">
-              </video>
-            </div>
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="{{ '/assets/videos/masked.mp4' | relative_url }}" type="video/mp4">
+            </video>
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="{{ '/assets/videos/ours.mp4' | relative_url }}" type="video/mp4">
+            </video>
           </div>
         </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This is the abstract for the Super-Resolution project. Replace this with your actual abstract content.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
