@@ -8,30 +8,15 @@ code_url: "#"
 dataset_url: "#"
 ---
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <div class="twentytwenty-container">
-            <video muted autoplay="autoplay" loop="loop" width="100%">
-              <source src="{{ '/assets/videos/1_1_lq.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video muted autoplay="autoplay" loop="loop" width="100%">
-              <source src="{{ '/assets/videos/1_1_hq.mp4' | relative_url }}" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="item">
-          <div class="twentytwenty-container">
-            <video muted autoplay="autoplay" loop="loop" width="100%">
-              <source src="{{ '/assets/videos/1_2_lq.mp4' | relative_url }}" type="video/mp4">
-            </video>
-            <video muted autoplay="autoplay" loop="loop" width="100%">
-              <source src="{{ '/assets/videos/1_2_hq.mp4' | relative_url }}" type="video/mp4">
-            </video>
-          </div>
-        </div>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Video Test</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <video controls autoplay loop muted width="100%">
+          <source src="{{ '/assets/videos/1_1_lq.mp4' | relative_url }}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </div>
