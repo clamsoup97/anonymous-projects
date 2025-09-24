@@ -47,5 +47,5 @@ Your results...
 
 ## Projects
 
-- [Super-Resolution Project](/projects/superres)
-- [APT Project](/projects/apt)
+- [APT Project](/apt/)
+- [Super-Resolution Project](/super_res/)
