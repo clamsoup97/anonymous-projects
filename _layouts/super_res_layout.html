@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="SeedVR2.">
+<meta name="keywords" content="Diffusion transformer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: 'Super-Resolution' }}</title>
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/bulma.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/bulma-carousel.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/bulma-slider.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/fontawesome.all.min.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/index.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/tab_gallery.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/juxtapose.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/image_card_fader.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/image_card_slider.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/seedvr2/css/twentytwenty.css' | relative_url }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="{{ '/assets/seedvr2/js/fontawesome.all.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/seedvr2/js/bulma-carousel.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/seedvr2/js/bulma-slider.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/seedvr2/js/index.js' | relative_url }}"></script>
+</head>
+<body>
+
+{{ content }}
+
+<footer class="footer">
+<div class="container">
+<div class="columns is-centered">
+<div class="column is-8">
+<div class="content">
+<p>
+This website is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
+<p>
+Website adapted from the following <a
+href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="{{ '/assets/seedvr2/js/jquery.event.move.js' | relative_url }}"></script>
+<script src="{{ '/assets/seedvr2/js/jquery.twentytwenty.js' | relative_url }}"></script>
+<script>
+$(function(){
+$(".twentytwenty-container").twentytwenty();
+});
+</script>
+</body>
+</html>
