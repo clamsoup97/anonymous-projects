@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/academic.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- JS -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="{{ '/assets/js/index.js' | relative_url }}"></script>
+
+</head>
+<body>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">{{ page.title }}</h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">{{ page.authors }}</span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">{{ page.venue }}</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  {% if page.paper_url %}
+                  <span class="link-block">
+                    <a href="{{ page.paper_url }}" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  {% endif %}
+                  {% if page.code_url %}
+                  <span class="link-block">
+                    <a href="{{ page.code_url }}" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  {% endif %}
+                  {% if page.dataset_url %}
+                  <span class="link-block">
+                    <a href="{{ page.dataset_url }}" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{ content }}
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
