@@ -38,7 +38,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Faster Video Super-Resolution with Sparse Attention</h1>
+          <h1 class="title is-1 publication-title">SkipSR: Faster Super-Resolution with Token Skipping</h1>
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
@@ -178,8 +178,8 @@
         <div class="content has-text-justified">
           <p>
             Diffusion-based super-resolution (SR) is a key component in video generation and video restoration, but is slow and expensive, limiting scalability to higher resolutions and longer videos.
-Our key insight is that many regions in video are inherently low-detail and gain little from refinement, yet current methods process all pixels uniformly. To take advantage of this, we propose SkipSR, a simple framework for accelerating video SR by identifying low-detail regions directly from low-resolution input, then applying sparse attention to super-resolve only areas that require refinement. 
-This simple, yet effective strategy preserves perceptual quality in both standard and one-step diffusion SR models while significantly reducing computation. In standard SR benchmarks, our method achieves up to 40$\%$ faster inference than prior models without loss of quality, and when integrated into cascaded diffusion pipelines, it further improves the efficiency of high-resolution video generation.
+            Our key insight is that many regions in video are inherently low-detail and gain little from refinement, yet current methods process all pixels uniformly. To take advantage of this, we propose SkipSR, a simple framework for accelerating video SR by identifying low-detail regions directly from low-resolution input, then skipping computation on them entirely, only super-resolving the areas that require refinement. 
+            This simple yet effective strategy preserves perceptual quality in both standard and one-step diffusion SR models while significantly reducing computation. In standard SR benchmarks, our method achieves up to 60% faster end-to-end latency than prior models on 720p videos with no perceptible loss in quality.
           </p>
         </div>
       </div>
