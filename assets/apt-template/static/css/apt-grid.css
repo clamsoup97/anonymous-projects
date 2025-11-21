@@ -1,0 +1,235 @@
+/* Interactive APT grid demo styles */
+.apt-grid-section {
+  margin-top: 2rem;
+}
+
+.apt-grid-panel {
+  display: block;
+}
+
+/* Controls go below the figure */
+.apt-controls.box {
+  margin-top: 1rem;
+}
+
+.apt-controls.box {
+  position: static;
+}
+
+.apt-figure {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* allow a larger figure on wide screens */
+  margin: 0 auto; /* center */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background-color: #000;
+}
+
+.apt-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.apt-grid-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow interactions to pass through */
+  z-index: 1;
+}
+
+/* Image rendering canvas below the grid */
+.apt-image-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Carousel navigation buttons */
+.apt-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  cursor: pointer;
+  z-index: 2; /* above canvas */
+  transition: background 0.15s ease;
+}
+
+.apt-nav-btn:hover {
+  background: rgba(0,0,0,0.65);
+}
+
+.apt-nav-prev { left: 10px; }
+.apt-nav-next { right: 10px; }
+
+/* Bottom-left overlay for stats */
+.apt-overlay {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  gap: 8px;
+  z-index: 3; /* above grid and image */
+  opacity: 1; /* always visible */
+}
+
+.apt-overlay .apt-chip {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  line-height: 1;
+  backdrop-filter: saturate(120%) blur(4px);
+}
+
+/* Force white text for any nested elements inside the chip */
+.apt-overlay .apt-chip *,
+.apt-overlay .apt-chip strong {
+  color: #fff !important;
+}
+
+/* Allow green highlight inside chip for reduction percent */
+.apt-overlay .apt-chip .apt-green {
+  color: #22c55e !important; /* tailwind-ish green-500 */
+  font-weight: 700;
+}
+
+/* New compact chip style for detection/segmentation overlays */
+.apt-chip2 {
+  position: absolute !important;
+  left: 25% !important;
+  transform: translateX(-50%) !important;
+  z-index: 999 !important;
+  background: rgba(0,0,0,0.8) !important;
+  color: #fff !important;
+  padding: 4px 10px !important;
+  border-radius: 4px !important;
+  white-space: nowrap !important;
+  font-size: 0.8rem !important;
+  line-height: 1.2 !important;
+}
+
+.apt-chip2 * {
+  color: #fff !important;
+}
+
+.apt-chip2 .apt-green {
+  color: #22c55e !important;
+  font-weight: 700;
+}
+
+/* Position for top quadrant (base tokens) - at bottom of upper image */
+.apt-chip2-top {
+  bottom: 50% !important;
+  transform: translate(-50%, calc(50% - 25px)) !important;
+}
+
+/* Position for bottom quadrant (apt tokens) - at bottom of lower image */
+.apt-chip2-bottom {
+  bottom: 30px !important;
+}
+
+/* Carousel items need relative positioning for overlays */
+.carousel .item {
+  position: relative;
+}
+
+/* Make overlays always visible in carousel items */
+.carousel .item .apt-overlay {
+  opacity: 1;
+}
+
+/* Small helper for control labels */
+.apt-field {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.apt-field .value {
+  min-width: 2.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Compact controls layout */
+.apt-grid-section .apt-controls.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px 16px;
+  padding-top: 12px;
+}
+
+.apt-grid-section .apt-controls.box > .title {
+  grid-column: 1 / -1;
+  margin-bottom: 0.25rem;
+}
+
+/* Make threshold section span full width */
+.apt-grid-section .apt-controls.box > .field:has(#apt-thresholds-wrap) {
+  grid-column: 1 / -1;
+}
+
+.apt-grid-section .apt-controls.box .field {
+  margin-bottom: 0; /* tighten vertical space */
+}
+
+.apt-grid-section .apt-controls.box .label {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem !important;
+}
+
+.apt-grid-section .apt-controls.box .tag.is-light {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Make threshold rows sit side-by-side nicely */
+#apt-threshold-row-s2,
+#apt-threshold-row-s3,
+#apt-threshold-row-s4 {
+  align-items: center;
+}
+
+/* Slightly thinner sliders in compact mode */
+.apt-grid-section .apt-controls.box input[type="range"] {
+  height: 0.6rem;
+}
+
+/* Horizontal, wrapping threshold sliders */
+.apt-thresholds-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.apt-thresholds-wrap .apt-thr {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.apt-thresholds-wrap .apt-thr .control {
+  margin-right: 8px;
+}
