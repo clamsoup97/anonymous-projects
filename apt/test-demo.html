@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>APT Demo Test</title>
+  <link rel="stylesheet" href="../assets/apt-template/static/css/apt-grid.css">
+  <style>
+    body { margin: 40px; font-family: sans-serif; }
+    .test-container { max-width: 1200px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <div class="test-container">
+    <h1>APT Demo Test Page</h1>
+    <p>This page tests if the APT interactive demo is working correctly.</p>
+    <p><strong>Check the browser console for debug messages.</strong></p>
+    
+    <figure class="apt-figure apt-grid-demo" style="margin: 20px 0;">
+      <button class="apt-nav-btn apt-nav-prev" type="button">‹</button>
+      <img class="apt-img" src="../assets/apt-imgs/golden_gate3.jpg" alt="Test image">
+      <canvas class="apt-grid-canvas"></canvas>
+      <div class="apt-overlay">
+        <span class="apt-chip"><strong>Size:</strong> <span id="apt-stats-size">—</span></span>
+        <span class="apt-chip"><strong>Base Tokens:</strong> <span id="apt-stats-tokens">—</span></span>
+        <span class="apt-chip"><strong>APT Tokens:</strong> <span id="apt-stats-apt-tokens">—</span></span>
+      </div>
+      <button class="apt-nav-btn apt-nav-next" type="button">›</button>
+    </figure>
+
+    <div class="apt-controls box" style="padding: 20px; background: #f5f5f5; border-radius: 8px;">
+      <h3>Controls</h3>
+      <div class="field">
+        <label class="label">Short Side Size</label>
+        <input id="apt-short-side-range" type="range" min="224" max="1024" step="16" value="512">
+        <span id="apt-short-side-value">512 px</span>
+      </div>
+      <div class="field">
+        <label class="label">Base patch size</label>
+        <input id="apt-base-size-range" type="range" min="8" max="128" step="8" value="16">
+        <input id="apt-base-size-number" type="number" min="8" max="128" step="8" value="16">
+      </div>
+      <div class="field">
+        <label class="label">Number of Scales</label>
+        <div id="apt-num-scales-group">
+          <label><input type="radio" name="apt-num-scales" value="2" checked> 2</label>
+          <label><input type="radio" name="apt-num-scales" value="3"> 3</label>
+          <label><input type="radio" name="apt-num-scales" value="4"> 4</label>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Entropy Thresholds</label>
+        <div id="apt-threshold-row-s2">
+          <span id="apt-threshold-size-s2">—</span>
+          <input id="apt-threshold-range-s2" type="range" min="0" max="10" step="0.5" value="5.0">
+          <span id="apt-threshold-value-s2">5.0</span>
+        </div>
+        <div id="apt-threshold-row-s3" style="display:none;">
+          <span id="apt-threshold-size-s3">—</span>
+          <input id="apt-threshold-range-s3" type="range" min="0" max="10" step="0.5" value="5.0">
+          <span id="apt-threshold-value-s3">5.0</span>
+        </div>
+        <div id="apt-threshold-row-s4" style="display:none;">
+          <span id="apt-threshold-size-s4">—</span>
+          <input id="apt-threshold-range-s4" type="range" min="0" max="10" step="0.5" value="5.0">
+          <span id="apt-threshold-value-s4">5.0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/apt-template/static/js/apt-grid.js"></script>
+</body>
+</html>
