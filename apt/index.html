@@ -481,7 +481,401 @@
 </section>
 <!-- End Examples -->
 
+<!-- PCA Visualization Comparisons -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">PCA Feature Visualizations</h2>
 
+      <!-- Navigation Controls -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+        <button id="pca-prev" class="button is-light" style="font-size: 1.5rem; padding: 0.5rem 1rem;" title="Previous sample">
+          <span class="icon"><i class="fas fa-chevron-left"></i></span>
+        </button>
+        <div style="min-width: 200px; text-align: center;">
+          <span id="pca-sample-title" class="title is-5" style="margin: 0;"></span>
+          <div style="margin-top: 0.5rem;">
+            <span class="tag is-info is-light" id="pca-sample-counter"></span>
+          </div>
+        </div>
+        <button id="pca-next" class="button is-light" style="font-size: 1.5rem; padding: 0.5rem 1rem;" title="Next sample">
+          <span class="icon"><i class="fas fa-chevron-right"></i></span>
+        </button>
+      </div>
+
+      <!-- Samples Container -->
+      <div id="pca-samples-container">
+        <!-- Sample 1: 000000065736 -->
+      <div class="pca-sample" data-sample-name="Sample 1" style="display: none;">
+
+        <!-- Patches Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Patch Size Distribution</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_patches_pca000.png" alt="Sample 1 Patches - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_patches_pca432.png" alt="Sample 1 Patches - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCA Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">PCA Feature Space</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_pca_pca000.png" alt="Sample 1 PCA - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_pca_pca432.png" alt="Sample 1 PCA - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boxes Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Bounding Box Visualization</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_boxes_pca000.jpg" alt="Sample 1 Boxes - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000065736_boxes_pca432.jpg" alt="Sample 1 Boxes - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 2: 000000109798 -->
+      <div class="pca-sample" data-sample-name="Sample 2" style="display: none;">
+
+        <!-- Patches Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Patch Size Distribution</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_patches_pca000.png" alt="Sample 2 Patches - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_patches_pca432.png" alt="Sample 2 Patches - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCA Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">PCA Feature Space</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_pca_pca000.png" alt="Sample 2 PCA - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_pca_pca432.png" alt="Sample 2 PCA - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boxes Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Bounding Box Visualization</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_boxes_pca000.jpg" alt="Sample 2 Boxes - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000109798_boxes_pca432.jpg" alt="Sample 2 Boxes - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 3: 000000127530 -->
+      <div class="pca-sample" data-sample-name="Sample 3" style="display: none;">
+
+        <!-- Patches Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Patch Size Distribution</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_patches_pca000.png" alt="Sample 3 Patches - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_patches_pca432.png" alt="Sample 3 Patches - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCA Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">PCA Feature Space</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_pca_pca000.png" alt="Sample 3 PCA - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_pca_pca432.png" alt="Sample 3 PCA - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boxes Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Bounding Box Visualization</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_boxes_pca000.jpg" alt="Sample 3 Boxes - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000127530_boxes_pca432.jpg" alt="Sample 3 Boxes - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sample 4: 000000002473 -->
+      <div class="pca-sample" data-sample-name="Sample 4" style="display: none;">
+
+        <!-- Patches Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Patch Size Distribution</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_patches_pca000.png" alt="Sample 4 Patches - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_patches_pca432.png" alt="Sample 4 Patches - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCA Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">PCA Feature Space</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_pca_pca000.png" alt="Sample 4 PCA - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_pca_pca432.png" alt="Sample 4 PCA - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boxes Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Bounding Box Visualization</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_boxes_pca000.jpg" alt="Sample 4 Boxes - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000002473_boxes_pca432.jpg" alt="Sample 4 Boxes - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div> <!-- End pca-samples-container -->
+
+      <!-- JavaScript for PCA navigation -->
+      <script>
+        (function() {
+          const samples = document.querySelectorAll('.pca-sample');
+          const prevBtn = document.getElementById('pca-prev');
+          const nextBtn = document.getElementById('pca-next');
+          const titleEl = document.getElementById('pca-sample-title');
+          const counterEl = document.getElementById('pca-sample-counter');
+          let currentIndex = 0;
+
+          function showSample(index) {
+            // Hide all samples
+            samples.forEach(s => s.style.display = 'none');
+
+            // Show current sample
+            if (samples[index]) {
+              samples[index].style.display = 'block';
+              titleEl.textContent = samples[index].dataset.sampleName;
+              counterEl.textContent = `Sample ${index + 1} of ${samples.length}`;
+            }
+
+            // Update button states
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === samples.length - 1;
+          }
+
+          prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+              currentIndex--;
+              showSample(currentIndex);
+            }
+          });
+
+          nextBtn.addEventListener('click', () => {
+            if (currentIndex < samples.length - 1) {
+              currentIndex++;
+              showSample(currentIndex);
+            }
+          });
+
+          // Keyboard navigation
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+              currentIndex--;
+              showSample(currentIndex);
+            } else if (e.key === 'ArrowRight' && currentIndex < samples.length - 1) {
+              currentIndex++;
+              showSample(currentIndex);
+            }
+          });
+
+          // Show first sample on load
+          showSample(0);
+        })();
+      </script>
+
+      <!-- Failure Case Section -->
+      <div style="margin-top: 4rem; border-top: 2px solid #e0e0e0; padding-top: 2rem;">
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Failure Case: Blurry Boundaries</h2>
+        <p class="subtitle has-text-centered" style="margin-bottom: 2rem; color: #666;">
+          When image regions have unclear boundaries, APT may struggle to determine optimal patch sizes
+        </p>
+
+        <!-- Patches Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Patch Size Distribution</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca000.png" alt="Failure Case Patches - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca432.png" alt="Failure Case Patches - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCA Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">PCA Feature Space</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca000.png" alt="Failure Case PCA - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca432.png" alt="Failure Case PCA - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Boxes Comparison -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 class="title is-6">Bounding Box Visualization</h4>
+          <div class="columns is-mobile">
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca000.jpg" alt="Failure Case Boxes - Baseline" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca432.jpg" alt="Failure Case Boxes - APT" loading="lazy"/>
+                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End PCA Visualization Comparisons -->
 
 
 
