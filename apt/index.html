@@ -809,67 +809,125 @@
 
       <!-- Failure Case Section -->
       <div style="margin-top: 4rem; border-top: 2px solid #e0e0e0; padding-top: 2rem;">
-        <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Failure Case: Blurry Boundaries</h2>
-        <p class="subtitle has-text-centered" style="margin-bottom: 2rem; color: #666;">
-          When image regions have unclear boundaries, APT may struggle to determine optimal patch sizes
-        </p>
+        <h2 class="title is-3">Failure Case: Blurry Boundaries</h2>
 
-        <!-- Patches Comparison -->
-        <div style="margin-bottom: 1.5rem;">
-          <h4 class="title is-6">Patch Size Distribution</h4>
-          <div class="columns is-mobile">
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca000.png" alt="Failure Case Patches - Baseline" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
-              </figure>
+        <!-- Navigation Controls -->
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <button id="failure-prev" class="button is-light" style="font-size: 1.5rem; padding: 0.5rem 1rem;" title="Previous visualization">
+            <span class="icon"><i class="fas fa-chevron-left"></i></span>
+          </button>
+          <div style="min-width: 200px; text-align: center;">
+            <span id="failure-viz-title" class="title is-5" style="margin: 0;"></span>
+            <div style="margin-top: 0.5rem;">
+              <span class="tag is-info is-light" id="failure-viz-counter"></span>
             </div>
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca432.png" alt="Failure Case Patches - APT" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
-              </figure>
+          </div>
+          <button id="failure-next" class="button is-light" style="font-size: 1.5rem; padding: 0.5rem 1rem;" title="Next visualization">
+            <span class="icon"><i class="fas fa-chevron-right"></i></span>
+          </button>
+        </div>
+
+        <!-- Visualizations Container -->
+        <div id="failure-viz-container">
+          <!-- Patches Comparison -->
+          <div class="failure-viz" data-viz-name="Patch Size Distribution" style="display: none;">
+            <div class="columns is-mobile">
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca000.png" alt="Failure Case Patches - Baseline" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_patches_pca432.png" alt="Failure Case Patches - APT" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- PCA Comparison -->
+          <div class="failure-viz" data-viz-name="PCA Feature Space" style="display: none;">
+            <div class="columns is-mobile">
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca000.png" alt="Failure Case PCA - Baseline" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca432.png" alt="Failure Case PCA - APT" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boxes Comparison -->
+          <div class="failure-viz" data-viz-name="Bounding Box Visualization" style="display: none;">
+            <div class="columns is-mobile">
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca000.jpg" alt="Failure Case Boxes - Baseline" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
+                </figure>
+              </div>
+              <div class="column">
+                <figure class="image">
+                  <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca432.jpg" alt="Failure Case Boxes - APT" loading="lazy"/>
+                  <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- PCA Comparison -->
-        <div style="margin-bottom: 1.5rem;">
-          <h4 class="title is-6">PCA Feature Space</h4>
-          <div class="columns is-mobile">
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca000.png" alt="Failure Case PCA - Baseline" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
-              </figure>
-            </div>
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_pca_pca432.png" alt="Failure Case PCA - APT" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
+        <!-- JavaScript for Failure Case navigation -->
+        <script>
+          (function() {
+            const vizs = document.querySelectorAll('.failure-viz');
+            const prevBtn = document.getElementById('failure-prev');
+            const nextBtn = document.getElementById('failure-next');
+            const titleEl = document.getElementById('failure-viz-title');
+            const counterEl = document.getElementById('failure-viz-counter');
+            let currentIndex = 0;
 
-        <!-- Boxes Comparison -->
-        <div style="margin-bottom: 1.5rem;">
-          <h4 class="title is-6">Bounding Box Visualization</h4>
-          <div class="columns is-mobile">
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca000.jpg" alt="Failure Case Boxes - Baseline" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Standard Patches</figcaption>
-              </figure>
-            </div>
-            <div class="column">
-              <figure class="image">
-                <img src="../assets/apt-template/static/images/pca/000000003156_boxes_pca432.jpg" alt="Failure Case Boxes - APT" loading="lazy"/>
-                <figcaption class="has-text-centered" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">APT</figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
+            function showViz(index) {
+              // Hide all visualizations
+              vizs.forEach(v => v.style.display = 'none');
+
+              // Show current visualization
+              if (vizs[index]) {
+                vizs[index].style.display = 'block';
+                titleEl.textContent = vizs[index].dataset.vizName;
+                counterEl.textContent = `${index + 1} of ${vizs.length}`;
+              }
+
+              // Update button states
+              prevBtn.disabled = index === 0;
+              nextBtn.disabled = index === vizs.length - 1;
+            }
+
+            prevBtn.addEventListener('click', () => {
+              if (currentIndex > 0) {
+                currentIndex--;
+                showViz(currentIndex);
+              }
+            });
+
+            nextBtn.addEventListener('click', () => {
+              if (currentIndex < vizs.length - 1) {
+                currentIndex++;
+                showViz(currentIndex);
+              }
+            });
+
+            // Show first visualization on load
+            showViz(0);
+          })();
+        </script>
       </div>
 
     </div>
